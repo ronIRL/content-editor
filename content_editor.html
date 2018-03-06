@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/content-editor.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="toolbar clearfixgroup">
+      <select id="element-type-select" onchange="block.setType(event.srcElement.value)">
+        <option value="H3">Heading</option>
+        <option value="H4">Subheading</option>
+        <option value="P">Paragraph</option>
+        <option value="PRE">Preformatted</option>
+        <option value="BLOCKQUOTE">Blockquote</option>
+      </select>
+      <span class="clearfixgroup buttongroup">
+          <button onClick="content.apply('strong')"><strong>B</strong></button>
+          <button onClick="content.apply('em')"><em>I</em></button>
+          <button onClick="content.apply('del')"><del>S</del></button>
+          <button onClick="content.apply('u')"><u>U</u></button>
+        </span>
+        <span class="clearfixgroup buttongroup">
+          <button onClick="content.apply('span', [{name: 'style', value: 'font-size: 1.25em'},{name: 'data-style', value: 'fontsize'}])"><span style="position: relative; top: 0.083em; font-size: 1.33em; line-height: 0.75">Aa</span></button>
+          <button onClick="content.apply('span', [{name: 'style', value: 'font-size: 1em'},{name: 'data-style', value: 'fontsize'}])">Aa</button>
+          <button onClick="content.apply('span', [{name: 'style', value: 'font-size: 0.8em'},{name: 'data-style', value: 'fontsize'}])"><span style="position: relative; top: -0.063em; font-size: 0.75em">Aa</span></button>
+        </span>
+        <span class="clearfixgroup buttongroup">
+            <button onClick="content.apply('sup')">x<sup>2</sup></button>
+            <button onClick="content.apply('sub')">x<sub>2</sub></button>
+          </span>
+        <span class="clearfixgroup buttongroup">
+          <button style="width: 3em" disabled>IMG</button>
+          <button style="width: 3em" disabled>TBL</button>
+          <button style="width: 3em" disabled>LNK</button>
+        </span>
+        <span class="clearfixgroup buttongroup">
+          <button style="width: 3em" disabled>• A</button>
+          <button style="width: 3em" disabled>1. A</button>
+          <button disabled>←</button>
+          <button disabled>→</button>
+        </span>
+        <span class="clearfixgroup buttongroup">
+          <button onClick="block.setStyle('text-align','left')">←</button>
+          <button onClick="block.setStyle('text-align','center')">⟷</button>
+          <button onClick="block.setStyle('text-align','right')">→</button>
+          <button onClick="block.setStyle('text-align','justify')">=</button>
+        </span>
+        <span class="clearfixgroup buttongroup">
+          <button onClick="content.apply('remove')">⃠</button>
+        </span>
+    </div>
+    <div id="content-editor">
+      <h3 contenteditable="true" onkeydown="keyboard.action(event)" onfocus="selection.updateElement(event.srcElement)">Simple Content Editor</h3>
+      <p contenteditable="true" onkeydown="keyboard.action(event)" onfocus="selection.updateElement(event.srcElement)">Click in here to begin editing. You can use the dropdown to select the block type, or the buttons to apply styles. Hit enter to create a new block.</p>
+    </div>
+    <button onClick="block.toString()">Generate</button>
+    <div id="output">Press "Generate" button to get HTML code.</div>
+  </body>
+</html>

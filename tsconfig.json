@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "outFile": "js/content-editor.js",
+        "sourceMap": true,
+        "lib": [
+          "dom",
+          "es7"
+        ]
+    },
+    "files": [
+        "ts/main.ts",
+        "ts/selection.ts",
+        "ts/content.ts",
+        "ts/abstract-content.ts",
+        "ts/keyboard.ts",
+        "ts/blocks.ts"
+    ]
+}

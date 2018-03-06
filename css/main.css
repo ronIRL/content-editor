@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,pre,blockquote {
+  margin: 0.5em 0 0.5em 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+blockquote {
+  border-left: 0.25em solid #999;
+  padding: 0.25em 0 0.25em 0.5em;
+  font-style: italic;
+}
+blockquote em {
+  font-style: normal;
+}
+.clearfixgroup:before,
+.clearfixgroup:after {
+  content: "";
+  display: table;
+}
+
+.clearfixgroup:after {
+  clear: both;
+}
+
+body {
+  background-color: #f8f8f8;
+  padding: 0 1em 0 1em;
+  font-size: 16px;
+}
+select {
+  background-color: #fff;
+  height: 2.25em;
+  float: left;
+  margin: 0.3125em 0.5em 0.3125em 0;
+  font-size: 0.8em;
+}  
+button {
+  font-size: 0.8em;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #999;
+  border-width: 1px;
+  text-align: center;
+  height: 2.25em;
+  padding: 0 1em 0 1em;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+.toolbar button {
+  padding: 0;
+  width: 2.5em;
+  border-width: 1px 1px 1px 0;
+  float: left;
+}
+.toolbar button sup {
+  vertical-align: top;
+  font-size: 0.6em; 
+}
+.toolbar button sub {
+  vertical-align: bottom;
+  font-size: 0.6em; 
+}
+.active {
+  font-weight: bold;
+  border-color: #08f;
+}
+.toolbar {
+  margin-top: 1em;
+  clear: both;
+  min-width: 200px;
+}
+.buttongroup {
+  float: left;
+  margin: 0.25em 0.4em 0.25em 0;
+  box-sizing: border-box;
+}
+.toolbar button:first-child {
+  border-left-width: 1px;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+.toolbar button:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+#content-editor {
+  background-color: #fff;
+  margin: 1em 0 1em 0;
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 0.0em;
+  box-sizing: border-box;
+  padding: 1em;
+  min-width: 200px;
+}
+
+#output {
+  min-width: 200px;
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid #999;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
